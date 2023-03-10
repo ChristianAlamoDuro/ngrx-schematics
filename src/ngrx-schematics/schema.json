@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "reduxSchematics",
+  "title": "Redux Schematics",
+  "type": "object",
+  "description": "Generate entities for redux",
+  "properties": {
+    "entity": {
+      "type": "string",
+      "description": "The name of the entity",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "Whats your entity name"
+    }
+  },
+  "required": ["entity"]
+}
