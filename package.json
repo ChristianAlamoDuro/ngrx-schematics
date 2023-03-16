@@ -1,6 +1,6 @@
 {
-  "name": "ngrx-schematics",
-  "version": "1.0.0",
+  "name": "chrisatm13-ngrx-schematics",
+  "version": "1.0.12",
   "description": "schematics for ngrx",
   "private": false,
   "scripts": {
@@ -10,13 +10,14 @@
   "keywords": [
     "schematics"
   ],
-  "author": "",
+  "author": "Christian",
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
     "@angular-devkit/core": "^15.2.1",
     "@angular-devkit/schematics": "^15.2.1",
-    "typescript": "~4.9.3"
+    "typescript": "~4.9.3",
+    "@schematics/angular": "^8.3.9"
   },
   "devDependencies": {
     "@types/node": "^14.15.0",

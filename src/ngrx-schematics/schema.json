@@ -7,12 +7,12 @@
   "properties": {
     "entity": {
       "type": "string",
-      "description": "The name of the entity",
+      "description": "The name of the entity (singular)",
       "$default": {
         "$source": "argv",
         "index": 0
       },
-      "x-prompt": "Whats your entity name"
+      "x-prompt": "Whats your entity name (singular)"
     }
   },
   "required": ["entity"]
