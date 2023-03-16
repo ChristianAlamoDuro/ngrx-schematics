@@ -1,7 +1,7 @@
 {
   "name": "ngrx-schematics",
   "version": "0.0.0",
-  "description": "A blank schematics",
+  "description": "schematics for ngrx",
   "private": false,
   "scripts": {
     "build": "tsc -p tsconfig.json",
