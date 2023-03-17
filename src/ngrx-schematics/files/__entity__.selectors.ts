@@ -1,10 +1,8 @@
 import { Dictionary } from '@ngrx/entity';
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { <%=entity%>Adapter } from './<%=entity%>.reducer';
-import { State as RootState } from '@core/store';
-import { <%=classify(entity)%>State } from './<%=entity%>.reducer';
+import { <%=entity%>Adapter, <%=classify(entity)%>State } from './<%=entity%>.reducers';
 
-export const select<%=classify(entity)%>State = createFeatureSelector<RootState, <%=classify(entity)%>State>('<%=entity%>');
+export const select<%=classify(entity)%>State = createFeatureSelector<<%=classify(entity)%>State>('<%=entity%>');
 
 export const {
     selectIds,
