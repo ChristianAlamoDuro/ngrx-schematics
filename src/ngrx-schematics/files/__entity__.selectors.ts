@@ -6,7 +6,6 @@ import { <%=classify(entity)%>State } from './<%=entity%>.reducer';
 
 export const select<%=classify(entity)%>State = createFeatureSelector<RootState, <%=classify(entity)%>State>('<%=entity%>');
 
-// get the selectors
 export const {
     selectIds,
     selectEntities,
@@ -14,7 +13,7 @@ export const {
     selectTotal
 } = <%=entity%>Adapter.getSelectors();
 
-export const selectAll<%=classify(entity)%> = createSelector(
+export const selectAll<%=pluralize(classify(entity))%> = createSelector(
     select<%=classify(entity)%>State,
     selectAll
 );
@@ -26,5 +25,5 @@ export const select<%=classify(entity)%>Entities = createSelector(
 
 export const select<%=classify(entity)%> = createSelector(
     select<%=classify(entity)%>Entities,
-    (<%=entity%>: Dictionary<<%=classify(entity)%>>, { <%=entity%>Id }: { <%=entity%>Id: string }) => <%=entity%>[<%=entity%>Id]
+    (<%=pluralize(entity)%>: Dictionary<<%=classify(entity)%>>, { <%=entity%>Id }: { <%=entity%>Id: string }) => <%=pluralize(entity)%>[<%=entity%>Id]
 );

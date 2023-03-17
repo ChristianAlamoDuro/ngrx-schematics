@@ -1,8 +1,8 @@
-import { createAction } from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
 
-export const get<%= classify(entity) %> = createAction('[<%= entity %>] Get <%= entity %>');
+export const get<%=pluralize(classify(entity))%> = createAction('[<%=classify(entity)%>] Get <%=pluralize(entity)%>');
 
-export const get<%= classify(entity) %>Successfully = createAction(
-    '[<%= entity %>] Get <%= entity %> successfully',
-    props<{ <%= entity %>: <%=classify(entity) %>[] }>()
+export const get<%=pluralize(classify(entity))%>Successfully = createAction(
+    '[<%=classify(entity)%>] Get <%=pluralize(entity)%> successfully',
+    props<{ <%=pluralize(entity)%>: <%=classify(entity)%>[] }>()
 );
